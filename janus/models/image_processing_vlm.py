@@ -196,7 +196,10 @@ class VLMImageProcessor(BaseImageProcessor):
         return [3, self.image_size, self.image_size]
 
 
-AutoImageProcessor.register(VLMImageProcessorConfig, VLMImageProcessor)
+AutoImageProcessor.register(
+    VLMImageProcessorConfig,
+    slow_image_processor_class=VLMImageProcessor
+)
 
 
 if __name__ == "__main__":

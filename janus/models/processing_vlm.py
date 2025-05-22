@@ -70,7 +70,7 @@ class BatchedVLChatProcessorOutput(DictOutput):
 
 
 class VLChatProcessor(ProcessorMixin):
-    image_processor_class = "AutoImageProcessor"
+    slow_image_processor_class = "AutoImageProcessor"
     tokenizer_class = ("LlamaTokenizer", "LlamaTokenizerFast")
 
     attributes = ["image_processor", "tokenizer"]
